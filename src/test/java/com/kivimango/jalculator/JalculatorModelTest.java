@@ -1,5 +1,5 @@
-import com.kivimango.jalculator.JalculatorModel;
-import com.kivimango.jalculator.JalculatorModelImpl;
+package com.kivimango.jalculator;
+
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -14,7 +14,7 @@ public class JalculatorModelTest {
     }
 
     @Test
-    public void calculateSubstractionTest() {
+    public void calculateSubtractionTest() {
         JalculatorModel jalculator = new JalculatorModelImpl();
         String input = "23-89-15";
         int expectedResult = -81;

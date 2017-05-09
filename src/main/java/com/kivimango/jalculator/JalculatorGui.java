@@ -1,8 +1,14 @@
 package com.kivimango.jalculator;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -14,21 +20,23 @@ public class JalculatorGui {
 
     JalculatorModel jalculatorModel = new JalculatorModelImpl();
     JFrame frame = initFrame();
-    JTextField textField = initTextField();
+    RoundJTextField textField = initTextField();
 
     public JalculatorGui() {
-        frame.add(textField, BorderLayout.NORTH);
+        frame.add(initFieldPanel(), BorderLayout.NORTH);
         frame.add(initButtonsPanel(), BorderLayout.CENTER);
         frame.setVisible(true);
     }
 
     private JFrame initFrame() {
         JFrame frame = new JFrame(Jalculator.APP_TITLE);
+
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension frameSize = frame.getSize();
         int xCord = (screenSize.width - frameSize.width) / 2;
         int yCord = (screenSize.height - frameSize.height) / 2;
         frame.setLocation(xCord, yCord);
+
         frame.setMinimumSize(new Dimension(250,300));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout(5,5));
@@ -57,15 +65,27 @@ public class JalculatorGui {
         return frame;
     }
 
-    private JTextField initTextField() {
-        JTextField tf = new JTextField("0");
+    private RoundJTextField initTextField() {
+        RoundJTextField tf = new RoundJTextField(5);
         tf.setFocusable(false);
+        tf.setPreferredSize(new Dimension(250, 50));
+        tf.setHorizontalAlignment(SwingConstants.RIGHT);
+        tf.setFont(new Font("SansSerif", Font.BOLD, 20));
         return tf;
+    }
+
+    private JPanel initFieldPanel() {
+        JPanel fieldPanel = new JPanel();
+        fieldPanel.setLayout(new GridLayout(1,1, 0, 0));
+        fieldPanel.setBorder(new EmptyBorder(5,5,5,5));
+        fieldPanel.add(textField);
+        return fieldPanel;
     }
 
     private JPanel initButtonsPanel() {
         JPanel numbersPanel = new JPanel();
         numbersPanel.setLayout(new GridLayout(5,3, 3, 3));
+        numbersPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
         for(int i =1; i<10; i++) {
             numbersPanel.add(createSimpleButton((String.valueOf(i))));

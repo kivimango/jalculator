@@ -22,6 +22,15 @@ public class JalculatorModelTest {
     }
 
     @Test
+    public void calculationShouldBeNegativeNumber() {
+        JalculatorModel jalculator = new JalculatorModelImpl();
+        String input = "65-113";
+        int expectedResult = -48;
+        assertEquals(expectedResult, jalculator.calculate(input));
+    }
+
+
+    @Test
     public void calculateMultiplicationTest() {
         JalculatorModel jalculator = new JalculatorModelImpl();
         String input = "1*2*3";
@@ -42,6 +51,14 @@ public class JalculatorModelTest {
         JalculatorModel jalculator = new JalculatorModelImpl();
         String input = "1+2*3";
         int expectedResult = 7;
+        assertEquals(expectedResult, jalculator.calculate(input));
+    }
+
+    @Test(expected=ArithmeticException.class)
+    public void calculationShouldThrowArithmeticException() {
+        JalculatorModel jalculator = new JalculatorModelImpl();
+        String input = "83/0";
+        int expectedResult = 0;
         assertEquals(expectedResult, jalculator.calculate(input));
     }
 }

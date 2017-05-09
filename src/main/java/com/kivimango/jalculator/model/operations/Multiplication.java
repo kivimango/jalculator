@@ -1,4 +1,4 @@
-package com.kivimango.jalculator;
+package com.kivimango.jalculator.model.operations;
 
 public class Multiplication implements Operation {
 

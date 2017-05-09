@@ -1,5 +1,8 @@
-package com.kivimango.jalculator;
+package com.kivimango.jalculator.view;
 
+import com.kivimango.jalculator.Jalculator;
+import com.kivimango.jalculator.model.JalculatorModel;
+import com.kivimango.jalculator.model.JalculatorModelImpl;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;

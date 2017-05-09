@@ -1,5 +1,6 @@
 package com.kivimango.jalculator;
 
+import com.kivimango.jalculator.view.JalculatorGui;
 import java.io.IOException;
 
 public class Jalculator {

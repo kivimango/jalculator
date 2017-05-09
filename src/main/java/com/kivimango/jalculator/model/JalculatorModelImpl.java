@@ -1,5 +1,6 @@
-package com.kivimango.jalculator;
+package com.kivimango.jalculator.model;
 
+import com.kivimango.jalculator.model.operations.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

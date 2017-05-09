@@ -1,4 +1,4 @@
-package com.kivimango.jalculator;
+package com.kivimango.jalculator.view;
 
 import javax.swing.JTextField;
 import java.awt.Graphics;

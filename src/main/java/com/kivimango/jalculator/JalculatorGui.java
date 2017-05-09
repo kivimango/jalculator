@@ -1,9 +1,6 @@
 package com.kivimango.jalculator;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -15,6 +12,7 @@ import java.awt.event.KeyListener;
 
 public class JalculatorGui {
 
+    JalculatorModel jalculatorModel = new JalculatorModelImpl();
     JFrame frame = initFrame();
     JTextField textField = initTextField();
 
@@ -26,13 +24,11 @@ public class JalculatorGui {
 
     private JFrame initFrame() {
         JFrame frame = new JFrame(Jalculator.APP_TITLE);
-
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension frameSize = frame.getSize();
         int xCord = (screenSize.width - frameSize.width) / 2;
         int yCord = (screenSize.height - frameSize.height) / 2;
         frame.setLocation(xCord, yCord);
-
         frame.setMinimumSize(new Dimension(250,300));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout(5,5));
@@ -58,7 +54,6 @@ public class JalculatorGui {
             public void keyReleased(KeyEvent e) {
             }
         });
-
         return frame;
     }
 
@@ -111,9 +106,18 @@ public class JalculatorGui {
     }
 
     private void calculate() {
-        JalculatorModel jalculatorModel = new JalculatorModelImpl();
-        int result = jalculatorModel.calculate(textField.getText());
-        addTextToField(String.valueOf(result));
+        try {
+            String input = textField.getText();
+            if(input.startsWith("-")) {
+                input = "0" + input;
+            }
+            int result = jalculatorModel.calculate(input);
+            textField.setText(String.valueOf(result));
+        } catch(NumberFormatException | IndexOutOfBoundsException e) {
+            JOptionPane.showMessageDialog(frame, "Invalid input!", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch(ArithmeticException e) {
+            JOptionPane.showMessageDialog(frame, "Division by zero!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void removeLastCharacterFromTextField() {

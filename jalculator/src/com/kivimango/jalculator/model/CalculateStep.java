@@ -1,15 +1,16 @@
 package com.kivimango.jalculator.model;
 
 import com.kivimango.jalculator.model.operations.Operation;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CalculateStep {
 
     private List<String> operations;
-    private List<Integer> numbers;
+    private List<BigDecimal> numbers;
 
-    public CalculateStep(List<Integer> numbersParameter, List<String> operationsParameter) {
+    public CalculateStep(List<BigDecimal> numbersParameter, List<String> operationsParameter) {
         setNumbers(numbersParameter);
         setOperations(operationsParameter);
     }
@@ -43,7 +44,7 @@ public class CalculateStep {
     }
 
     private void executeOperation(int index, Operation operation) {
-        int result = operation.calculate(numbers.get(index - 1), numbers.get(index));
+        BigDecimal result = operation.calculate(numbers.get(index - 1), numbers.get(index));
         numbers.set(index - 1, result);
         operations.remove(index);
         numbers.remove(index);
@@ -53,11 +54,11 @@ public class CalculateStep {
         this.operations = new ArrayList<>(operations);
     }
 
-    public void setNumbers(List<Integer> numbers) {
+    public void setNumbers(List<BigDecimal> numbers) {
         this.numbers = new ArrayList<>(numbers);
     }
 
-    public int getResult() {
+    public BigDecimal getResult() {
         if(numbers.size() != 1) {
             throw new IllegalStateException("Invalid usage of class!");
         }

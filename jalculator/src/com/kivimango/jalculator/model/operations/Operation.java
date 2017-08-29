@@ -1,6 +1,8 @@
 package com.kivimango.jalculator.model.operations;
 
+import java.math.BigDecimal;
+
 public interface Operation {
     String getOperator();
-    int calculate(int param1, int param2);
+    BigDecimal calculate(BigDecimal param1, BigDecimal param2);
 }

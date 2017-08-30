@@ -1,7 +1,15 @@
 .root {
     -fx-font-family: 'Digital Counter 7';
-    -fx-font-size: 14pt;
+    -fx-font-size: 15pt;
     -fx-background-color: linear-gradient(#B0C1D4, #66798F);
+    -fx-font-smoothing-type: lcd;
+}
+
+.menu, .menu-bar {
+    -fx-font-family: 'Tahoma';
+    -fx-font-size: 10pt;
+    -fx-font-weight: bold;
+    -fx-background-color: #B0C1D4;
 }
 
 .text-input {
@@ -17,4 +25,3 @@
 .button-operator {
     -fx-background-color: #FFEEA3;
 }
-

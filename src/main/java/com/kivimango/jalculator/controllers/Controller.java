@@ -14,12 +14,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import java.math.BigDecimal;
 
-/**
- * @author kivimango
- * @version 1.0
- * @since 1.0
- */
-
 public class Controller {
 
     private CalculationModel model;
@@ -48,9 +42,11 @@ public class Controller {
                 } else if(key == KeyCode.C) {
                    input.setText("0");
                 }
+                //System.out.println(key);
             }
         };
         bp.addEventHandler(KeyEvent.KEY_PRESSED, handler);
+        System.out.println("event handler added");
     }
 
     @FXML
@@ -64,12 +60,13 @@ public class Controller {
                 input.setText(String.valueOf(result));
             } catch (NumberFormatException nf) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setHeaderText("Invalid input !" + "\n" +
-                        "Please input a valid mathematical expression.");
+                alert.setHeaderText(nf.getMessage());
+                alert.setContentText("Invalid input !");
                 alert.showAndWait();
-            } catch (ArithmeticException e) {
+            }
+            catch (ArithmeticException e) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setHeaderText("Division by zero !");
+                alert.setHeaderText(e.getLocalizedMessage());
                 alert.showAndWait();
                 }
             } else {

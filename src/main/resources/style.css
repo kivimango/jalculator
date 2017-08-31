@@ -1,6 +1,6 @@
 .root {
     -fx-font-family: 'Digital Counter 7';
-    -fx-font-size: 14pt;
+    -fx-font-size: 15pt;
     -fx-background-color: linear-gradient(#B0C1D4, #66798F);
 }
 
@@ -18,3 +18,6 @@
     -fx-background-color: #FFEEA3;
 }
 
+.button-equals {
+    -fx-background-color: #F78F8F;
+}

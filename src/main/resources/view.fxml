@@ -19,24 +19,28 @@
             <padding>
                 <Insets top="10" bottom="10" left="10" right="10"/>
             </padding>
-
             <Button text="C" minWidth="45" minHeight="45" GridPane.rowIndex="0" GridPane.columnIndex="0" onAction="#handleClick" focusTraversable="false"/>
-            <Button text="=" minWidth="45" minHeight="45" GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#handleClick" focusTraversable="false" styleClass="button-operator"/>
-            <Button text="0" minWidth="45" minHeight="45" GridPane.rowIndex="0" GridPane.columnIndex="2" onAction="#handleClick" focusTraversable="false"/>
-            <Button text="-" minWidth="45" minHeight="45" GridPane.rowIndex="0" GridPane.columnIndex="3" onAction="#handleClick" focusTraversable="false" styleClass="button-operator"/>
-            <Button text="1" minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#handleClick" focusTraversable="false"/>
-            <Button text="2" minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#handleClick" focusTraversable="false"/>
-            <Button text="3" minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="2" onAction="#handleClick" focusTraversable="false"/>
-            <Button text="+" minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="3" onAction="#handleClick" focusTraversable="false" styleClass="button-operator"/>
+
+            <Button text="7" minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#handleClick" focusTraversable="false"/>
+            <Button text="8" minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#handleClick" focusTraversable="false"/>
+            <Button text="9" minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="2" onAction="#handleClick" focusTraversable="false"/>
+            <Button text="/" minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="3" onAction="#handleClick" focusTraversable="false" styleClass="button-operator"/>
+
             <Button text="4" minWidth="45" minHeight="45" GridPane.rowIndex="2" GridPane.columnIndex="0" onAction="#handleClick" focusTraversable="false"/>
             <Button text="5" minWidth="45" minHeight="45" GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#handleClick" focusTraversable="false"/>
             <Button text="6" minWidth="45" minHeight="45" GridPane.rowIndex="2" GridPane.columnIndex="2" onAction="#handleClick" focusTraversable="false"/>
             <Button text="*" minWidth="45" minHeight="45" GridPane.rowIndex="2" GridPane.columnIndex="3" onAction="#handleClick" focusTraversable="false" styleClass="button-operator"/>
-            <Button text="7" minWidth="45" minHeight="45" GridPane.rowIndex="3" GridPane.columnIndex="0" onAction="#handleClick" focusTraversable="false"/>
-            <Button text="8" minWidth="45" minHeight="45" GridPane.rowIndex="3" GridPane.columnIndex="1" onAction="#handleClick" focusTraversable="false"/>
-            <Button text="9" minWidth="45" minHeight="45" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#handleClick" focusTraversable="false"/>
 
-            <Button text="/" minWidth="45" minHeight="45" GridPane.rowIndex="3" GridPane.columnIndex="3" onAction="#handleClick" focusTraversable="false" styleClass="button-operator"/>
+            <Button text="1" minWidth="45" minHeight="45" GridPane.rowIndex="3" GridPane.columnIndex="0" onAction="#handleClick" focusTraversable="false"/>
+            <Button text="2" minWidth="45" minHeight="45" GridPane.rowIndex="3" GridPane.columnIndex="1" onAction="#handleClick" focusTraversable="false"/>
+            <Button text="3" minWidth="45" minHeight="45" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#handleClick" focusTraversable="false"/>
+            <Button text="+" minWidth="45" minHeight="45" GridPane.rowIndex="3" GridPane.columnIndex="3" onAction="#handleClick" focusTraversable="false" styleClass="button-operator"/>
+
+            <Button text="." minWidth="45" minHeight="45" GridPane.rowIndex="4" GridPane.columnIndex="0" onAction="#handleClick" focusTraversable="false"/>
+            <Button text="=" minWidth="45" minHeight="45" GridPane.rowIndex="4" GridPane.columnIndex="1" onAction="#handleClick" focusTraversable="false" styleClass="button-equals"/>
+            <Button text="0" minWidth="45" minHeight="45" GridPane.rowIndex="4" GridPane.columnIndex="2" onAction="#handleClick" focusTraversable="false"/>
+            <Button text="-" minWidth="45" minHeight="45" GridPane.rowIndex="4" GridPane.columnIndex="3" onAction="#handleClick" focusTraversable="false" styleClass="button-operator"/>
+
             <!--<Button text="mod" minWidth="45" minHeight="45" GridPane.rowIndex="0" GridPane.columnIndex="4" onAction="#handleClick" focusTraversable="false"/>-->
             <!--<Button text="." minWidth="45" minHeight="45" GridPane.rowIndex="1" GridPane.columnIndex="4" onAction="#handleClick" focusTraversable="false"/>-->
             <!--<Button text="÷" minWidth="45" minHeight="45" GridPane.rowIndex="2" GridPane.columnIndex="4" onAction="#handleClick" focusTraversable="false"/>-->

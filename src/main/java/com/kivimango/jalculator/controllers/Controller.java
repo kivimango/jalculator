@@ -1,7 +1,7 @@
 package com.kivimango.jalculator.controllers;
 
-import com.kivimango.jalculator.model.CalculationModel;
-import com.kivimango.jalculator.model.JalculatorModelImpl;
+import com.kivimango.jalculator.core.CalculationModel;
+import com.kivimango.jalculator.core.JalculatorModelImpl;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;

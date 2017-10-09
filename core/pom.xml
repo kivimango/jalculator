@@ -5,12 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kivimango.jalculator</groupId>
-    <artifactId>jalculator</artifactId>
+    <artifactId>core</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>jalculator</name>
-    <description>Calculator app written in Java</description>
-    <url>https://github.com/kivimango/jalculator</url>
+    <name>core</name>
+    <description>The core logic of the app decoupled from the gui.You can wire the logic into any project you want,
+        (e.g.: web service, mobile or desktop app).
+    </description>
+    <url>https://github.com/kivimango/jalculator/tree/master/core</url>
     <inceptionYear>2017</inceptionYear>
 
     <developers>
@@ -24,29 +26,29 @@
         <url>https://github.com/kivimango/jalculator/issues</url>
     </issueManagement>
 
-    <modules>
-        <module>core</module>
-    </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.kivimango.jalculator</groupId>
-            <artifactId>core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <ciManagement>
+        <system>travis</system>
+        <url>https://travis-ci.org/kivimango/jalculator</url>
+    </ciManagement>
 
     <build>
-    <plugins>
-        <plugin>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>1.7</source>
-                <target>1.7</target>
-            </configuration>
-        </plugin>
-    </plugins>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

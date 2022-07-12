@@ -7,6 +7,7 @@
     <groupId>com.kivimango.jalculator</groupId>
     <artifactId>jalculator</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <name>jalculator</name>
     <description>Calculator app written in Java</description>
